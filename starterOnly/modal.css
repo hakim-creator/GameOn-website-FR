@@ -68,38 +68,7 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
 
 main {
   font-size: 130%;
@@ -478,6 +447,292 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
+
+.btn-fermer {
+  position: relative;
+  width: 131px;
+  height: 31px;
+  display: block;
+  margin: 0 auto;
+  background: #fe142f;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  padding: 0;
+}
+
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes modalclose {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+}
+
+.hide-modal {
+  animation-name: modalclose;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+#firstNameError,
+#lastNameError,
+#emailError,
+#birthdateError,
+#checkboxError,
+#locationError,
+#quantityError {
+  display: none;
+}
+
+.error-message {
+  color: #d9534f;
+  margin-top: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.field-error {
+  border: 2px solid #d9534f;
+}
+
+.postRegisterContent {
+  max-width: 536px;
+  max-height: 850px;
+  height: 83.1%;
+}
+
+.postRegisterContent-text {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding-top: 207px;
+  padding-bottom: 200px;
+}
+
+
+
+.postRegisterContent {
+  padding: 0;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 92%;
+  height: 1px;
+  background-color: white;
+  bottom: 6px;
+  left: 10px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+#nav-home::before {
+  width: 76%;
+}
+
+#nav-about::before {
+  width: 80%;
+}
+
+#nav-contact::before {
+  width: 80%;
+}
+
+#nav-pastevents::before {
+  width: 89%;
+}
+
+a.icon::before {
+  visibility: hidden;
+}
+
+
+@media (max-width: 1100px) {
+  .hero-content {
+    min-width: unset;
+  }
+
+  .hero-headline {
+    font-size: 4.5rem;
+  }
+
+  .hero-text {
+    width: 250%;
+  }
+
+  .postRegisterContent-text{
+    padding-bottom: 120px;
+  }
+}
+
+@media screen and (max-width: 837px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .content {
+    margin-top: 80px;
+  }
+
+  .hero-section {
+    display: block;
+    box-shadow: unset;
+  }
+
+  .hero-content {
+    background: #fff;
+    color: #000;
+    padding: 0;
+    min-width: unset;
+  }
+
+  .hero-content::after {
+    content: unset;
+  }
+
+  .hero-content .btn-signup {
+    display: none;
+  }
+
+  .hero-img img {
+    border-radius: 10px;
+    margin-top: 40px;
+  }
+
+  .hero-section>.btn-signup {
+    display: block;
+    margin: 32px auto 10px;
+    padding: 12px 35px;
+  }
+
+  .copyrights {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  #nav-home::before {
+    width: 32%;
+  }
+
+  #nav-details::before {
+    width: 92%;
+  }
+
+  #nav-about::before {
+    width: 39%;
+  }
+
+  #nav-contact::before {
+    width: 34%;
+  }
+
+  #nav-pastevents::before {
+    width: 84%;
+  }
+
+  .hero-headline {
+    font-weight: 500;
+    line-height: 52px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-size: calc(2.6rem + 2vw);
+    white-space: normal;
+  }
+
+  .hero-text {
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: unset;
+    margin-top: 17px;
+    font-size: calc(0.7rem + 1vw);
+  }
+
+  .header-logo {
+    width: 105.64px;
+    height: 19px;
+    top: 33px;
+    left: 30px;
+  }
+
+  .header-logo img {
+    width: 105.64px;
+    height: 19px;
+    top: 33px;
+    left: 30px;
+  }
+
+  .topnav {
+    margin-top: 33px;
+    overflow: unset;
+  }
+
+  #nav-home {
+    margin-top: 54px;
+  }
+
+  .topnav a {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin-top: -15px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .hero-section {
     display: block;
@@ -517,13 +772,68 @@ footer {
   }
 }
 
-@keyframes modalopen {
-  from {
-    opacity: 0;
-    transform: translateY(-150px);
+
+
+@media screen and (max-width: 768px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
   }
-  to {
-    opacity: 1;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
 
+
+
+ @media screen and (max-width: 540px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin-top: -15px;
+  }
+} 
+
+
+@media screen and (max-width: 536px) {
+  .postRegisterContent {
+    min-width: 100%;
+    max-height: 657px;
+    height: 89.3%;
+    position: relative;
+    top: 79px;
+  }
+
+  .content {
+    margin: 80px 0 0 0;
+  }
+
+  .topnav a {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 328px) {
+  .postRegisterContent-text {
+    padding-bottom: 214px;
+  }
+
+  .postRegisterContent-text{
+    padding-bottom: 110px;
+  }
+
+}
