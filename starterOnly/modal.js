@@ -197,6 +197,12 @@ locationInputs.forEach((input) => {
   });
 });
 
+
+checkbox.addEventListener("input", function() {
+  validateCheckbox(checkbox, checkboxError);
+});
+
+
   function validate() {
     const firstNameValid = validateName(firstNameInput, firstNameError);
     const lastNameValid = validateName(lastNameInput, lastNameError);
@@ -204,6 +210,8 @@ locationInputs.forEach((input) => {
     const birthdateValid = validateBirthdate(birthdateInput, birthdateError);
     const quantityValid = validateQuantity(quantityInput, quantityError);
     const locationValid = validateLocation(locationInputs, locationError);
+    const checkboxValid = validateCheckbox(checkbox, checkboxError);
+
   
     const isValid =
       firstNameValid &&
@@ -211,7 +219,8 @@ locationInputs.forEach((input) => {
       emailValid &&
       birthdateValid &&
       quantityValid &&
-      locationValid;
+      locationValid &&
+      checkboxValid;
   
     if (isValid) {
       launchM();
