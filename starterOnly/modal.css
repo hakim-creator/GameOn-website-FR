@@ -39,6 +39,7 @@ img {
 }
 .main-navbar {
     float: right;
+    margin-top: 15px;
 }
 .topnav a {
   float: left;
@@ -52,23 +53,22 @@ img {
   font-family: Roboto, sans-serif;
 }
 
-.topnav a:hover {
-  background-color: #ff0000;
-  color: #ffffff;
-  border-radius: 15px;
-}
 
-.topnav a.active {
-  background-color: #ff0000;
-  color: #ffffff;
-  border-radius: 15px;
-}
+
+
 
 .topnav .icon {
   display: none;
 }
 
+.fa-bars{
+  color: #FE142F;
+}
 
+.active:hover{
+  background-color: #FE142F;
+  border-radius: 15px;
+}
 
 main {
   font-size: 130%;
