@@ -174,6 +174,8 @@ const quantityInput = document.getElementById("quantity");
 const quantityError = document.getElementById("quantityError");
 const locationInputs = document.querySelectorAll('input[name="location"]');
 const locationError = document.getElementById("locationError");
+const myForm = document.getElementById('formValid');
+
 
 //EVENTS LISTENERS ON CHANGE
 firstNameInput.addEventListener("input", function() {
@@ -226,9 +228,11 @@ checkbox.addEventListener("input", function() {
       launchM();
       event.preventDefault();
       handleCloseModal();
+      myForm.reset();
       return true;
     } else {
       return false;
     }
   }
 
+  
