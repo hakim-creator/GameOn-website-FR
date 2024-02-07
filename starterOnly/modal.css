@@ -523,6 +523,8 @@ footer {
   max-width: 536px;
   max-height: 850px;
   height: 83.1%;
+  padding: 0;
+
 }
 
 .postRegisterContent-text {
@@ -537,9 +539,6 @@ footer {
 
 
 
-.postRegisterContent {
-  padding: 0;
-}
 
 a {
   position: relative;
@@ -603,22 +602,40 @@ a.icon::before {
   }
 }
 
-@media screen and (max-width: 837px) {
+
+
+
+
+
+@media screen and (max-width: 768px) {
   .topnav.responsive {
     position: relative;
   }
-
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
+
+  .topnav {
+    margin-top: 33px;
+    overflow: unset;
+  }
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin-top: -15px;
+
+  }
+
 
   .content {
     margin-top: 80px;
@@ -687,6 +704,7 @@ a.icon::before {
     text-align: left;
     font-size: calc(2.6rem + 2vw);
     white-space: normal;
+    font-size: 4.5rem;
   }
 
   .hero-text {
@@ -695,6 +713,7 @@ a.icon::before {
     letter-spacing: 0px;
     text-align: left;
     width: unset;
+    font-size: 1.5rem;
     margin-top: 17px;
     font-size: calc(0.7rem + 1vw);
   }
@@ -713,85 +732,14 @@ a.icon::before {
     left: 30px;
   }
 
-  .topnav {
-    margin-top: 33px;
-    overflow: unset;
-  }
+
 
   #nav-home {
     margin-top: 54px;
   }
 
-  .topnav a {
-    display: none;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-
-  .hero-section {
-    display: block;
-    box-shadow: unset;
-  }
-  .hero-content {
-    background: #fff;
-    color: #000;
-    padding: 20px;
-  }
-  .hero-content::after {
-    content: unset;
-  }
-  .hero-content .btn-signup {
-    display: none;
-  }
-  .hero-headline {
-    font-size: 4.5rem;
-    white-space: normal;
-  }
-  .hero-text {
-    width: unset;
-    font-size: 1.5rem;
-  }
-  .hero-img img {
-    border-radius: 10px;
-    margin-top: 40px;
-  }
-  .hero-section > .btn-signup {
-    display: block;
-    margin: 32px auto 10px;
-    padding: 12px 35px;
-  }
-  .copyrights {
-    margin-top: 50px;
-    text-align: center;
-  }
-}
 
 
-
-
-
-@media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
 }
 
 
@@ -819,7 +767,7 @@ a.icon::before {
     line-height: 60px;
   }
 
-  .topnav a {display: none;}
+
   .topnav a.icon {
     float: right;
     display: block;
@@ -828,9 +776,7 @@ a.icon::before {
 }
 
 @media screen and (max-width: 328px) {
-  .postRegisterContent-text {
-    padding-bottom: 214px;
-  }
+
 
   .postRegisterContent-text{
     padding-bottom: 110px;
