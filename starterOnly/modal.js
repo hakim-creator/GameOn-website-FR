@@ -7,7 +7,10 @@ function editNav() {
   }
 }
 
-// DOM Elements
+// Selctionner les éléments specifiques du HTML
+
+//querySelector Sélectionne le premier élément avec la classe "".
+//querySelectorAll Sélectionne tous les éléments avec la classe "".
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
@@ -20,29 +23,31 @@ const testcontent = document.querySelector(".postRegisterContent");
 const testclose = document.querySelector(".postRegisterClose");
 const btnfermer = document.querySelector(".btn-fermer");
 
-//  -------------- POST REGISTRATION MODAL --------------
+//  -------------- POST INSCRIPTION MODAL --------------
 
-// event listeners post registration modal
+// event listeners post inscription modal
+//ce code permet d'appeler certaines fonctions (launchM et handleM) lorsque certains éléments sont cliqués.
 testm.forEach((btn) => btn.addEventListener("click", launchM));
-testclose.addEventListener("click", handleM); // Use addEventListener directly
+testclose.addEventListener("click", handleM); // Utilisez addEventListener directement
 btnfermer.addEventListener("click", handleM);
 
-// launch post registration modal
+// lancer post inscription modal
+//Cela a pour effet de rendre l'élément visible et de supprimer la classe "hide-modal" de l'élément testcontent.
 function launchM() {
   testmodal.style.display = "block";
   testcontent.classList.remove("hide-modal");
 }
 
-// close  post registration modal
+// fermer  post inscription modal
 function handleM() {
   testcontent.classList.add("hide-modal"); 
   setTimeout(function () {
     testmodal.style.display = "none";
-  }, 222); // timeout for a smoother effect
+  }, 222); // délai d'attente pour un effet plus fluide
 }
 
 
-//  -------------- REGISTRATION MODAL --------------
+//  -------------- INSCRIPTION MODAL --------------
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
