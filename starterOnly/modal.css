@@ -699,7 +699,7 @@ a.icon::before {
 
   .hero-headline {
     font-weight: 500;
-    line-height: 52px;
+    line-height: 60px;
     letter-spacing: 0px;
     text-align: left;
     font-size: calc(2.6rem + 2vw);
@@ -715,7 +715,6 @@ a.icon::before {
     width: unset;
     font-size: 1.5rem;
     margin-top: 17px;
-    font-size: calc(0.7rem + 1vw);
   }
 
   .header-logo {
@@ -764,8 +763,9 @@ a.icon::before {
     display: none;
   }
   .hero-headline {
-    line-height: 60px;
+    line-height: 50px;
     font-size: 2.5rem;
+    font-weight: 600;
 
   }
 
@@ -774,6 +774,10 @@ a.icon::before {
     float: right;
     display: block;
     margin-top: -15px;
+  }
+
+  .hero-text{
+    font-size: 14px;
   }
 }
 
@@ -790,5 +794,8 @@ a.icon::before {
 
   }
 
+  .hero-text{
+    font-size: 10px;
+  }
   
 }
