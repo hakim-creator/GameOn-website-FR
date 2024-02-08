@@ -1,3 +1,4 @@
+// la fonction editNav est utilisée pour ajouter ou supprimer la classe "responsive" de l'élément avec l'ID "myTopnav", en fonction de sa classe actuelle.
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -55,16 +56,16 @@ closeModal.forEach(function (element) {
   element.addEventListener("click", handleCloseModal);
 });
 
-// launch modal form
+// ouvre le formulaire du modal
 function launchModal() {
   modalbg.style.display = "block";
   content.classList.remove("hide-modal");
 }
 
-// close modal form
+// ferme le formulaire du modal
 function handleCloseModal() {
   content.classList.add("hide-modal"); 
-// Listen for the animation end event to actually hide the modal after the animation completes
+//Écoutez l'événement de fin d'animation pour masquer le modal une fois l'animation terminée
   content.addEventListener("animationend", function (event) {
     if (event.animationName === "modalclose") {
       modalbg.style.display = "none";
@@ -74,7 +75,7 @@ function handleCloseModal() {
 }
 
 // FORM VALIDATION 
-
+//Cette fonction validateName valide le contenu d'un champ de saisie (input) en fonction d'une expression régulière et affiche ou cache un élément d'erreur en fonction du résultat de la validation.
 function validateName(input, errorElement) {
   const regex = /^[A-Za-zÀ-ÖØ-öø-ÿ]{2,}$/;
   if (!regex.test(input.value)) {
@@ -88,6 +89,8 @@ function validateName(input, errorElement) {
   }
 }
 
+
+//La fonction validateEmail valide le contenu d'un champ de saisie (input) pour s'assurer qu'il s'agit d'une adresse e-mail valide. Elle prend en paramètres le champ de saisie (input) et un élément d'erreur (errorElement). Elle affiche ou cache l'élément d'erreur en fonction du résultat de la validation.
 function validateEmail(input, errorElement) {
   const emailRegex = /^[A-Za-z]{1,}[A-Za-z0-9._%+-]+@[A-Za-z.-]+\.[A-Za-z]{2,}$/;
   if (!emailRegex.test(input.value)) {
@@ -101,6 +104,7 @@ function validateEmail(input, errorElement) {
   }
 }
 
+//La fonction validateBirthdate valide la date de naissance entrée par l'utilisateur. Elle prend en paramètres le champ de saisie (input) et un élément d'erreur (errorElement). Elle affiche ou cache l'élément d'erreur en fonction du résultat de la validation.
 function validateBirthdate(input, errorElement) {
   if (input.value === "") {
     errorElement.style.display = "block";
@@ -122,6 +126,7 @@ function validateBirthdate(input, errorElement) {
   }
 }
 
+//Cette fonction vérifie si une case à cocher (checkbox) est cochée et affiche ou cache un élément d'erreur en fonction du résultat de la vérification
 function validateCheckbox(input, errorElement) {
   if (!input.checked) {
     errorElement.style.display = "block";
@@ -132,6 +137,8 @@ function validateCheckbox(input, errorElement) {
   }
 }
 
+
+//La fonction validateQuantity vérifie si la valeur d'un champ de saisie (input) est un nombre non vide. Elle prend en paramètres le champ de saisie (input) et un élément d'erreur (errorElement) à afficher ou à cacher en fonction du résultat de la vérification.
 function validateQuantity(input, errorElement) {
   if (input.value === "" || isNaN(input.value)) {
     errorElement.style.display = "block";
@@ -144,6 +151,7 @@ function validateQuantity(input, errorElement) {
   }
 }
 
+//La fonction validateLocation  vérifie si au moins une case à cocher parmi plusieurs est cochée. Elle prend en paramètres un ensemble de cases à cocher et un élément d'erreur à afficher ou à cacher en fonction du résultat de la vérification.
 function validateLocation(locationInputs, errorElement) {
   let isLocationSelected = false;
   locationInputs.forEach((input) => {
@@ -163,7 +171,7 @@ function validateLocation(locationInputs, errorElement) {
 }
 
 
-// FORM VALIDATION PROCESS
+// PROCESSUS DE VALIDATION DU FORMULAIRE
 
 const firstNameInput = document.getElementById("first");
 const firstNameError = document.getElementById("firstNameError");
@@ -183,6 +191,8 @@ const myForm = document.getElementById('formValid');
 
 
 //EVENTS LISTENERS ON CHANGE
+
+// ce code ajoute un gestionnaire d'événements à l'élément firstNameInput qui appelle la fonction validateName chaque fois que l'utilisateur modifie la valeur de firstNameInput.
 firstNameInput.addEventListener("input", function() {
   validateName(firstNameInput, firstNameError);
 });
@@ -209,7 +219,7 @@ checkbox.addEventListener("input", function() {
   validateCheckbox(checkbox, checkboxError);
 });
 
-
+//La fonction validate est utilisée pour valider un formulaire. Elle appelle plusieurs autres fonctions de validation pour chaque champ du formulaire, puis vérifie si toutes les validations ont réussi pour renvoyer true ou false. Si toutes les validations réussissent, le formulaire est soumis.
   function validate() {
     const firstNameValid = validateName(firstNameInput, firstNameError);
     const lastNameValid = validateName(lastNameInput, lastNameError);
